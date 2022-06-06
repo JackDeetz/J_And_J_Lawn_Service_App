@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/app_bar_action_one_submit"
+        android:title="App Bar Action One"
+        android:icon="@drawable/submit"
+        app:showAsAction="always"/>
+
+    <item android:id="@+id/app_bar_action_two_clear_fields"
+        android:title="Clear Fields"
+        android:icon="@drawable/waste_bin"
+        app:showAsAction="always"/>
+
+</menu>

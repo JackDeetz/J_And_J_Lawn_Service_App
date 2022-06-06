@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:screenOrientation="portrait"
+    android:focusable="true"
+    tools:context=".StartAJobActivity">
+
+    <EditText
+        android:id="@+id/customerNameEditText"
+        android:layout_width="204dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="20dp"
+        android:inputType="textPersonName"
+        android:maxLines="1"
+        android:backgroundTint="@color/white"
+        android:text=""
+        android:hint="Customer Name"
+        app:layout_constraintStart_toStartOf="@+id/startAJobDriveButton"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/startAJobDriveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="Start Job Drive"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/customerNameEditText" />
+
+    <ImageView
+        android:id="@+id/drivingIsActiveImageView"
+        android:layout_width="137dp"
+        android:layout_height="80dp"
+        android:visibility="invisible"
+        app:background="@drawable/driving_ace_animation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/startAJobDriveButton" />
+
+    <TextView
+        android:id="@+id/driveLastInfoTextView"
+        android:layout_width="249dp"
+        android:layout_height="108dp"
+        android:layout_marginTop="10dp"
+        android:text=""
+        app:layout_constraintStart_toStartOf="@+id/startAJobDriveButton"
+        app:layout_constraintTop_toBottomOf="@+id/startAJobDriveButton" />
+
+    <Button
+        android:id="@+id/startMowingButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Start Mowing"
+        app:layout_constraintStart_toStartOf="@+id/driveLastInfoTextView"
+        app:layout_constraintTop_toBottomOf="@+id/driveLastInfoTextView" />
+
+    <ImageView
+        android:id="@+id/mowingIsActiveImageView"
+        android:layout_width="137dp"
+        android:layout_height="80dp"
+        android:visibility="invisible"
+        app:background="@drawable/mowing_forest_animation"
+        app:layout_constraintStart_toStartOf="@+id/drivingIsActiveImageView"
+        app:layout_constraintTop_toTopOf="@+id/startMowingButton" />
+
+    <TextView
+        android:id="@+id/loggedMowEventsTextView"
+        android:layout_width="255dp"
+        android:layout_height="149dp"
+        android:layout_marginTop="10dp"
+        android:text=""
+        app:layout_constraintStart_toStartOf="@+id/startMowingButton"
+        app:layout_constraintTop_toBottomOf="@+id/startMowingButton" />
+
+    <Button
+        android:id="@+id/startWeedEatingButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Start WeedEating"
+        app:layout_constraintStart_toStartOf="@+id/loggedMowEventsTextView"
+        app:layout_constraintTop_toBottomOf="@+id/loggedMowEventsTextView" />
+
+    <ImageView
+        android:id="@+id/weedEatingIsActiveImageView"
+        android:layout_width="137dp"
+        android:layout_height="80dp"
+        android:visibility="invisible"
+        app:background="@drawable/mowing_forest_animation"
+        app:layout_constraintStart_toStartOf="@+id/drivingIsActiveImageView"
+        app:layout_constraintTop_toTopOf="@+id/startWeedEatingButton" />
+
+    <TextView
+        android:id="@+id/loggedWeedEatingEventsTextView"
+        android:layout_width="255dp"
+        android:layout_height="149dp"
+        android:layout_marginTop="10dp"
+        android:text=""
+        app:layout_constraintStart_toStartOf="@+id/startWeedEatingButton"
+        app:layout_constraintTop_toBottomOf="@+id/startWeedEatingButton" />
+
+    <TextView
+        android:id="@+id/submitResultsTextView"
+        android:layout_width="130dp"
+        android:layout_height="116dp"
+        android:layout_marginTop="10dp"
+        android:text=""
+        app:layout_constraintStart_toStartOf="@+id/mowingIsActiveImageView"
+        app:layout_constraintTop_toBottomOf="@+id/mowingIsActiveImageView" />
+
+    <EditText
+        android:id="@+id/jobNotes"
+        android:layout_width="136dp"
+        android:layout_height="85dp"
+        android:hint="Any Job Notes"
+        android:textSize="8sp"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/mowingIsActiveImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/drivingIsActiveImageView" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
